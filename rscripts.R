@@ -15,7 +15,7 @@ length(unique(asia$country))
 gapminder$gdp <- gapminder$gdpPercap * gapminder$pop
 gapminder$RelationToMeanPop <- NA
 for(i in 1:nrow(gapminder)){
-  if (gapminder$pop[i] > mean(gapminder$pop)){
+  if (gapminder$[i, 'pop'] > mean(gapminder$pop)){
     gapminder$RelationToMeanPop[i] = "Above"
   }else if(gapminder$pop[i] <- mean(gapminder$pop)){
     gapminder$RelationToMeanPop[i] = "Below"
