@@ -25,7 +25,8 @@ for(i in 1:nrow(gapminder)){
 }
 table(gapminder$RelationToMeanPop)
 ggplot(gapminder, aes(x=year,y=lifeExp, color=continent)) +
-  geom_smooth(method = 'lm')
+  geom_smooth(method = 'lm', se=FALSE)
 
 ggplot(gapminder, aes(x=continent, y=gdpPercap, fill=continent)) + 
-  geom_boxplot()
+  geom_boxplot()+ geom_text(aes(label=country))
+
